@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+
+        nav {
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(29, 29, 87);
+        }
+
+        nav ul {
+            display: flex;
+            justify-self: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftsSection {
+            font-size: 3rem;
+        }
+
+        .leftsSection .btn {
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .leftsSection .buttons{
+            padding: 50px 0;
+        }
+
+        .rightSection {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .verticle {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .image-top {
+
+            width: 37px;
+            position: relative;
+            top: -33px;
+            left: -18px;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .verticle-title {
+            position: relative;
+            top: 55px;
+            width: 288px;
+            font-size: 18px;
+
+        }
+        .company-name {
+            position: relative;
+            top: 55px;
+            width: 288px;
+            font-size: 18px;
+            color: rgb(170, 107, 228);
+            font-weight: bold;  
+
+        }
+        .date{
+            color: gray ;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .verticle-desc {
+            position: relative;
+            top: 55px;
+            width: 288px;
+            color: grey;
+            color: gray;
+            font-size: 11px;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Saurabh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftsSection">
+                Hi, My name is <span class="purple">Saurabh</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit GitHub</button>
+                    <button class="btn">Visit Linkedin</button>
+                </div>
+            </div>
+
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have do so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="verticle">
+                    <img class="image-top" src="lentra.png" alt="Lentra">
+                    <div class="company-name">
+                        Lentra Ai Pvt Ltd <span class="date">(09/2022 to present)</span>
+                    </div>
+                    <div class="verticle-title">
+                        Associate Product Development
+                    </div>
+                    <div class="verticle-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur dignissimos quae nisi
+                        explicabo sunt ullam deserunt quam repellat autem porro doloribus molestias, inventore
+                        consequuntur eius aliquid reprehenderit, nemo perferendis exercitationem.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Saurabh's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright © saurabhportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Java Backend Developer', 'Spring Boot Developer',],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
