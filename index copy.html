@@ -21,22 +21,20 @@
         }
 
         nav {
-
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 80px;
-            background-color: #F0FFFF
+            background-color: #F0FFFF;
         }
 
         nav ul {
             display: flex;
-            justify-self: center;
+            gap: 20px;
         }
 
         nav ul li {
             list-style: none;
-            margin: 0 23px;
         }
 
         nav ul li a {
@@ -132,7 +130,7 @@
         }
 
         .rightSection img {
-            width: 54%;
+            width: 100%;
             height: auto;
             border-radius: 10px;
         }
@@ -212,7 +210,7 @@
             }
 
             50% {
-                transform: rotate(0eg);
+                transform: rotate(0deg);
             }
 
             75% {
@@ -252,7 +250,6 @@
         }
 
         footer {
-
             background-color: #F0FFFF;
             padding: 40px 0;
         }
@@ -314,6 +311,7 @@
             }
 
             .secondSection .box {
+                flex-direction: column;
                 padding: 20px;
             }
 
@@ -326,10 +324,12 @@
 
 <body>
     <header>
-        <nav>
-            <div class="left">SAURABH's PORTFOLIO</div>
-            <div class="right">
-                <ul>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">SAURABH's PORTFOLIO</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About</a></li>
                     <li><a href="/">Services</a></li>
@@ -341,31 +341,59 @@
     </header>
 
     <main>
-        <section class="firstSection">
-            <div class="leftsSection">
-                <div>
-                    <span class="shake">👋</span>
+        <section class="container firstSection">
+            <div class="row">
+                <div class="col-md-6 leftsSection">
+                    <div>
+                        <span class="shake">👋</span>
+                    </div>
+                    Hi, My name is <span class="purple">Saurabh</span>
+                    <div>and I am a passionate</div>
+                    <span id="element"></span>
+                    <div class="buttons">
+                        <button class="btn">Download Resume</button>
+                        <button class="btn">Visit GitHub</button>
+                        <button class="btn">Visit LinkedIn</button>
+                    </div>
                 </div>
-                Hi, My name is <span class="purple">Saurabh</span>
-                <div>and I am a passionate</div>
-                <span id="element"></span>
-                <div class="buttons">
-                    <button class="btn">Download Resume</button>
-                    <button class="btn">Visit GitHub</button>
-                    <button class="btn">Visit LinkedIn</button>
+                <div class="col-md-6 rightSection">
+                    <img src="bg.png" alt="">
                 </div>
-            </div>
-
-            <div class="rightSection">
-                <img src="bg.png" alt="">
             </div>
         </section>
         <hr>
-        <section class="secondSection">
-
+        <section class="secondSection container">
             <h1>Work Experience</h1>
-            <div class="box">
-                <div class="verticle">
+            <div class="box row">
+                <div class="col-md-12 verticle">
+                    <img class="image-top" src="lentra.png" alt="Lentra">
+                    <div class="company-name">
+                        Lentra Ai Pvt Ltd <span class="date">(09/2022 to present)</span>
+                    </div>
+                    <div class="verticle-title">
+                        Associate Product Development
+                    </div>
+                    <div class="verticle-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur dignissimos quae nisi
+                        explicabo sunt ullam deserunt quam repellat autem porro doloribus molestias, inventore
+                        consequuntur eius aliquid reprehenderit, nemo perferendis exercitationem.
+                    </div>
+                </div>
+                <div class="col-md-12 verticle">
+                    <img class="image-top" src="lentra.png" alt="Lentra">
+                    <div class="company-name">
+                        Lentra Ai Pvt Ltd <span class="date">(09/2022 to present)</span>
+                    </div>
+                    <div class="verticle-title">
+                        Associate Product Development
+                    </div>
+                    <div class="verticle-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur dignissimos quae nisi
+                        explicabo sunt ullam deserunt quam repellat autem porro doloribus molestias, inventore
+                        consequuntur eius aliquid reprehenderit, nemo perferendis exercitationem.
+                    </div>
+                </div>
+                <div class="col-md-12 verticle">
                     <img class="image-top" src="lentra.png" alt="Lentra">
                     <div class="company-name">
                         Lentra Ai Pvt Ltd <span class="date">(09/2022 to present)</span>
@@ -383,22 +411,24 @@
         </section>
     </main>
     <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3>Saurabh's Portfolio</h3>
+        <div class="footer container-fluid">
+            <div class="row">
+                <div class="col-md-4 footer-first">
+                    <h3>Saurabh's Portfolio</h3>
+                </div>
+                <div class="col-md-4 footer-second">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Projects</li>
+                        <li>Contact Me</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-second">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
-                </ul>
+            <div class="footer-rights">
+                Copyright © saurabhportfolio.com | All rights reserved
             </div>
-        </div>
-        <div class="footer-rights">
-            Copyright © saurabhportfolio.com | All rights reserved
         </div>
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
