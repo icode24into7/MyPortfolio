@@ -349,10 +349,12 @@
                 Hi, My name is <span class="purple">Saurabh</span>
                 <div>and I am a passionate</div>
                 <span id="element"></span>
+                <a href="https://docs.google.com/document/d/1tZJlIvhq3gflLRWzC65FpC53Zv-jLNUX/export?format=pdf"
+                    id="resumeLink" style="display: none;">Download Resume</a>
                 <div class="buttons">
-                    <button class="btn">Download Resume</button>
-                    <button class="btn">Visit GitHub</button>
-                    <button class="btn">Visit LinkedIn</button>
+                    <button id="downloadBtn" class="btn">Download Resume</button>
+                    <button id="githubBtn" class="btn">Visit GitHub</button>
+                    <button id="linkedinBtn" class="btn">Visit LinkedIn</button>
                 </div>
             </div>
 
@@ -408,6 +410,29 @@
             strings: ['Full Stack Developer',],
             typeSpeed: 50,
         });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('downloadBtn').addEventListener('click', downloadDocument);
+            document.getElementById('githubBtn').addEventListener('click', visitGitHub);
+            document.getElementById('linkedinBtn').addEventListener('click', visitLinkedIn);
+        });
+
+
+        function downloadDocument() {
+            console.log("sasas");
+            document.getElementById('resumeLink').click();
+        }
+
+        function visitGitHub() {
+            console.log("Opening GitHub in a new tab");
+            window.open('https://github.com/icode24into7', '_blank');
+        }
+
+        function visitLinkedIn() {
+            console.log("Opening LinkedIn in a new tab");
+            window.open('https://www.linkedin.com/in/saurabh-kotwal/', '_blank');
+        }
+
     </script>
 </body>
 
