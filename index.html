@@ -13,187 +13,114 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         body {
-            margin: 0;
-            padding: 0;
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(173, 202, 226) 100%);
             color: black;
         }
 
-        nav {
-
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            background-color: #F0FFFF
+        .navbar {
+            background-color: #F0FFFF;
+            border: none;
         }
 
-        nav ul {
-            display: flex;
-            justify-self: center;
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #4A90E2 !important;
         }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
+        .navbar-nav>li>a {
+            color: #333 !important;
+            font-weight: 600;
+            font-size: 1.1em;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-        }
-
-        nav ul li a:hover {
-            color: rgb(153, 153, 226);
+        .navbar-nav>li>a:hover {
+            color: #4A90E2 !important;
         }
 
         .profile-section {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            background-color: #1d1d57;
-            border-bottom: 2px solid white;
-            position: relative;
-            top: -80px;
-            /* Moves the profile section up to overlap with the navbar */
-            padding-left: 60px;
+            margin-top: 50px;
         }
 
         .profile-section img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid white;
-            margin-right: 20px;
+            transition: transform 0.3s ease-in-out;
+            width: 301px;
+            transition: transform 0.3s
         }
 
-        .profile-section .profile-info {
-            font-size: 1.2rem;
-            font-weight: 600;
+        .profile-section img:hover {
+            transform: scale(1.1);
         }
 
-        main hr {
-            border: 0;
-            background: #9c97f1;
-            height: 1.2px;
-            margin: 60px 84px;
-        }
-
-        .left {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1e2167;
-            font-weight: bold;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 130px 20px;
-            flex-wrap: wrap;
-        }
-
-        .firstSection>div {
-            width: 100%;
-            max-width: 45%;
-            text-align: center;
-        }
-
-        .leftsSection {
-            font-size: 2rem;
-        }
-
-        .leftsSection .btn {
-            padding: 12px 24px;
-            background-color: #1e2167;
-            color: white;
-            border: 2px solid white;
-            border-radius: 6px;
-            font-size: 18px;
-            cursor: pointer;
+        .buttons .btn {
             margin: 5px;
+            padding: 10px 20px;
+            font-size: 1.1em;
             transition: background-color 0.3s, color 0.3s;
         }
 
-        .leftsSection .btn:hover {
-            background-color: white;
-            color: #1e2167;
+        .buttons .btn-primary {
+            background-color: #4A90E2;
+            border: none;
         }
 
-        .leftsSection .buttons {
+        .buttons .btn-primary:hover {
+            background-color: #357ABD;
+        }
+
+        h1,
+        h3 {
+            color: #4A90E2;
+        }
+
+        .skills-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-section ul li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .skills-section ul li:hover {
+            background-color: #4A90E2;
+            color: white;
+        }
+
+        .panel-body img {
+            width: 50px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+
+        footer {
+            background-color: #4A90E2;
+            color: white;
             padding: 30px 0;
         }
 
-        .rightSection {
-            width: 100%;
-            max-width: 45%;
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .rightSection img {
-            width: 54%;
-            height: auto;
-            border-radius: 10px;
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
         }
 
-        .purple {
-            color: rgb(170, 107, 228);
+        .footer ul li a:hover {
+            text-decoration: underline;
         }
 
-        #element {
-            color: rgb(170, 107, 228);
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
-            height: auto;
-        }
-
-        .secondSection h1 {
-            font-size: 2.2rem;
-            text-align: center;
-        }
-
-        .secondSection .box {
-            background: #F0FFFF;
-            width: 100%;
-            height: auto;
-            margin: 56px 0;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 40px;
-            border-radius: 10px;
-            display: flex;
-
-        }
-
-        .secondSection .verticle {
-            width: 100%;
-            max-width: 600px;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        .image-top {
-            width: 37px;
-            position: relative;
-            top: -10px;
-            left: -10px;
-            animation: rotation 2s infinite linear;
-        }
-
-        @keyframes rotation {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(359deg);
-            }
+        .footer-rights {
+            margin-top: 15px;
         }
 
         .shake {
@@ -223,113 +150,16 @@
                 transform: rotate(0deg);
             }
         }
-
-        .text-gray {
-            color: gray;
-        }
-
-        .verticle-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: black;
-        }
-
-        .company-name {
-            font-size: 20px;
-            color: #000000;
-            font-weight: bold;
-        }
-
-        .date {
-            color: gray;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .verticle-desc {
-            font-size: 14px;
-            color: gray;
-        }
-
-        footer {
-
-            background-color: #F0FFFF;
-            padding: 40px 0;
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin: 5px 0;
-        }
-
-        .footer>div {
-            width: 223px;
-            text-align: center;
-        }
-
-        .footer-rights {
-            text-align: center;
-            color: gray;
-            padding: 12px 0;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            main hr {
-                margin: 30px 20px;
-            }
-
-            .firstSection {
-                flex-direction: column;
-                margin: 60px 20px;
-            }
-
-            .leftsSection {
-                font-size: 1.5rem;
-            }
-
-            .rightSection {
-                max-width: 100%;
-            }
-
-            .secondSection {
-                max-width: 95vw;
-                padding: 10px;
-            }
-
-            .secondSection .box {
-                padding: 20px;
-            }
-
-            .footer {
-                flex-direction: column;
-            }
-        }
     </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="left">SAURABH's PORTFOLIO</div>
-            <div class="right">
-                <ul>
+        <nav class="navbar navbar-light bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Saurabh's Portfolio</a>
+
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About</a></li>
                     <li><a href="/">Services</a></li>
@@ -340,74 +170,146 @@
         </nav>
     </header>
 
-    <main>
-        <section class="firstSection">
-            <div class="leftsSection">
+    <main class="container">
+        <section class="row profile-section">
+            <div class="col-md-6 text-center">
                 <div>
                     <span class="shake">👋</span>
                 </div>
-                Hi, My name is <span class="purple">Saurabh</span>
-                <div>and I am a passionate</div>
-                <span id="element"></span>
-                <a href="https://docs.google.com/document/d/1tZJlIvhq3gflLRWzC65FpC53Zv-jLNUX/export?format=pdf"
+                <h2>Hi, My name is <span class="text-primary">Saurabh</span></h2>
+                <p>and I am a passionate</p>
+                <h3 id="element"></h3>
+                <a href="https://docs.google.com/document/d/1J19B4DbsfbzPi6kpIPlSUaLLG8zC3nL5ibxATKZwTU8/export?format=pdf"
                     id="resumeLink" style="display: none;">Download Resume</a>
                 <div class="buttons">
-                    <button id="downloadBtn" class="btn">Download Resume</button>
-                    <button id="githubBtn" class="btn">Visit GitHub</button>
-                    <button id="linkedinBtn" class="btn">Visit LinkedIn</button>
+                    <button id="downloadBtn" class="btn btn-primary">Download Resume</button>
+                    <button id="githubBtn" class="btn btn-primary">Visit GitHub</button>
+                    <button id="linkedinBtn" class="btn btn-primary">Visit LinkedIn</button>
                 </div>
             </div>
-
-            <div class="rightSection">
-                <img src="bg.png" alt="">
+            <div class="col-md-6 text-center">
+                <img src="bg.png" alt="Profile Picture" class="img-responsive center-block">
             </div>
         </section>
         <hr>
-        <section class="secondSection">
-
-            <h1>Work Experience</h1>
-            <div class="box">
-                <div class="verticle">
-                    <img class="image-top" src="lentra.png" alt="Lentra">
-                    <div class="company-name">
-                        Lentra Ai Pvt Ltd <span class="date">(09/2022 to present)</span>
+        <section class="row text-center skills-section">
+            <div class="col-md-12">
+                <h1>Skills</h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Backend</h3>
+                        <ul class="list-unstyled">
+                            <li>Java 8 onwards</li>
+                            <li>Spring Boot (FrameWork)</li>
+                            <li>Junit</li>
+                            <li>Mockito (FrameWork)</li>
+                        </ul>
                     </div>
-                    <div class="verticle-title">
-                        Associate Product Development
+                    <div class="col-md-3">
+                        <h3>Data Bases</h3>
+                        <ul class="list-unstyled">
+                            <li>SQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                        </ul>
                     </div>
-                    <div class="verticle-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur dignissimos quae nisi
-                        explicabo sunt ullam deserunt quam repellat autem porro doloribus molestias, inventore
-                        consequuntur eius aliquid reprehenderit, nemo perferendis exercitationem.
+                    <div class="col-md-3">
+                        <h3>Tools</h3>
+                        <ul class="list-unstyled">
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Kafka</li>
+                            <li>Kong</li>
+                            <li>JFR / JMC / K6</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Front End</h3>
+                        <ul class="list-unstyled">
+                            <li>HTML/CSS</li>
+                            <li>Java Script / Type Script</li>
+                            <li>Angular (FrameWork)</li>
+                            <li>Stencil Web Componant</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="row text-center">
+            <div class="col-md-12">
+                <h1>Work Experience</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="image-top" src="lentra.png" alt="Lentra">
+                        <div class="company-name">
+                            Lentra Ai Pvt Ltd <span class="date">(09/2022 to present)</span>
+                        </div>
+                        <div class="verticle-title">
+                            Associate Product Development
+                        </div>
+                        <div class="verticle-desc">
+                            <ul>
+                                <li>Developed and managed a robust Spring Boot application comprising over 70 REST APIs,
+                                    facilitating efficient management of lead records.</li>
+                                <li>Upheld code quality standards by implementing clean, maintainable coding practices.
+                                </li>
+                                <li>Demonstrated proficiency in Test-Driven Development (TDD) methodologies using JUnit
+                                    and Mockito, ensuring the reliability and resilience of software solutions.</li>
+                                <li>Collaborated on integrating Kafka to establish seamless data streaming capabilities
+                                    within the system.</li>
+                                <li>Implemented comprehensive authorization mechanisms to safeguard data integrity and
+                                    security.</li>
+                                <li>Played a pivotal role in optimizing multitenancy architecture, enhancing scalability
+                                    and resource utilization across diverse tenants.</li>
+                                <li>Engineered both synchronous and asynchronous integration solutions, fostering
+                                    seamless communication among microservices while optimizing system performance and
+                                    reliability.</li>
+                                <li>Managed database scripts meticulously to execute CRUD operations, ensuring data
+                                    consistency and integrity.</li>
+                                <li>Led front-end development initiatives, leveraging Stencil and JavaScript to create
+                                    immersive user experiences with standardized LEGO web components.</li>
+                                <li>Demonstrated expertise in performance monitoring and testing utilizing Java Flight
+                                    Recorder (JFR), Java Mission Control (JMC), and k6.</li>
+                                <li>Contributed significantly to various projects including Master Data Management,
+                                    Platform Commons, and Connector, leveraging Java, Spring Boot, and SQL technologies.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3>Saurabh's Portfolio</h3>
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Saurabh's Portfolio</h3>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/">Services</a></li>
+                        <li><a href="/">Projects</a></li>
+                        <li><a href="/">Contact Me</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-second">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
-                </ul>
+            <div class="row">
+                <div class="col-md-12 footer-rights">
+                    <p>&copy; 2024 saurabhportfolio.com | All rights reserved</p>
+                </div>
             </div>
-        </div>
-        <div class="footer-rights">
-            Copyright © saurabhportfolio.com | All rights reserved
         </div>
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
-            strings: ['Full Stack Developer',],
+            strings: ['Full Stack Developer'],
             typeSpeed: 50,
         });
 
@@ -417,22 +319,17 @@
             document.getElementById('linkedinBtn').addEventListener('click', visitLinkedIn);
         });
 
-
         function downloadDocument() {
-            console.log("sasas");
             document.getElementById('resumeLink').click();
         }
 
         function visitGitHub() {
-            console.log("Opening GitHub in a new tab");
             window.open('https://github.com/icode24into7', '_blank');
         }
 
         function visitLinkedIn() {
-            console.log("Opening LinkedIn in a new tab");
             window.open('https://www.linkedin.com/in/saurabh-kotwal/', '_blank');
         }
-
     </script>
 </body>
 
