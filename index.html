@@ -18,23 +18,27 @@
             color: black;
         }
 
-        
+
         nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 80px;
             background-color: #F0FFFF;
-
         }
+
         .navbar-default .navbar-brand {
             color: #4A90E2;
             font-weight: bold;
-}
+        }
 
         nav ul {
             display: flex;
             gap: 20px;
+            margin: 0;
+            /* Remove default margin */
+            padding: 0;
+            /* Remove default padding */
         }
 
         nav ul li {
@@ -50,13 +54,30 @@
             color: rgb(153, 153, 226);
         }
 
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                /* Stack items vertically */
+                height: auto;
+                /* Allow height to expand */
+            }
+
+            nav ul {
+                flex-direction: column;
+                /* Stack items vertically */
+                gap: 10px;
+                /* Reduce gap between items */
+            }
+        }
+
         .profile-section {
             margin-top: 50px;
         }
 
         .profile-section img {
             transition: transform 0.3s ease-in-out;
-            width: 301px;   
+            width: 301px;
             transition: transform 0.3s
         }
 
@@ -200,7 +221,7 @@
                 </div>
             </nav>
         </header>
-    
+
     </header>
 
     <main class="container">
